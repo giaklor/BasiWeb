@@ -22,40 +22,19 @@
 
   <display-name>Welcome to Tomcat</display-name>
   <description>
-     ROOT Context
+     Palestra Context
   </description>
 
 <!-- JSPC servlet mappings start -->
 
-
     <servlet>
-        <servlet-name>ServletHelloWWW</servlet-name>
-        <servlet-class>ServletHelloWWW</servlet-class>
+        <servlet-name>Palestra</servlet-name>
+        <servlet-class>Main</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>ServletHelloWWW</servlet-name>
-        <url-pattern>/servlet/ServletHelloWWW</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>ServletHelloWWW2</servlet-name>
-        <servlet-class>ServletHelloWWW2</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>ServletHelloWWW2</servlet-name>
-        <url-pattern>/servlet/ServletHelloWWW2</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>ServletLire</servlet-name>
-        <servlet-class>ServletLire</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>ServletLire</servlet-name>
-        <url-pattern>/servlet/ServletLire</url-pattern>
+        <servlet-name>Palestra</servlet-name>
+        <url-pattern>/main</url-pattern>
     </servlet-mapping>
 
 <!-- JSPC servlet mappings end -->
