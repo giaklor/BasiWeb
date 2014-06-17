@@ -21,9 +21,8 @@
 				</td>
 			</tr>
 <%
-	Vector tipi = (Vector)request.getAttribute("tipi");
-	for(Object o: tipi) {
-			TipoAttBean t = (TipoAttBean) o;
+	Vector<TipoAttBean> tipi = (Vector<TipoAttBean>)request.getAttribute("tipi");
+	for (TipoAttBean t : tipi) {
 			String linkTipo = "\"main?ps=tipo&den=" + t.getDenominazione() + "\"";
 %>		
 			<tr>
