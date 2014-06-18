@@ -27,9 +27,6 @@
 %>		
 			<tr>
 				<td>
-					Immagine tipo -- da sistemare
-				</td>
-				<td>
 					<a href=<%= linkTipo %>> <%= t.getDenominazione() %> </a></b>
 				</td>
 			</tr>
