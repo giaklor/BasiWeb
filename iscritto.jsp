@@ -27,8 +27,10 @@
 			</tr>
 		</table>
 		
-		I tuoi corsi:
-			
+<%
+		if (corsi.size() > 0) {
+%>
+			I tuoi corsi:
 <%
 			for (CorsoBean c : corsi) {
 				
@@ -48,7 +50,12 @@
 				</ul>
 <%
 			}
+		}
+		else {
 %>
-		
+			Non sei iscritto ad alcun corso.
+<%
+		}
+%>
    </body>
 </html>
