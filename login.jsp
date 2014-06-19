@@ -5,15 +5,9 @@
 		
 		<script type="text/javascript">
 			function validateForm() {
-				var mail = document.forms["subscriberData"]["email"].value;
-				if (mail == null || mail == "") {
-					alert("Inserire l'indirizzo email");
-					return false;
-				}
-				var at = mail.indexOf("@");
-				var dot = mail.lastIndexOf(".");
-				if (at == -1 || dot < at || dot == at + 1 || dot == mail.length - 1) {
-					alert("Indirizzo email non valido");
+				var username = document.forms["subscriberData"]["username"].value;
+				if (username == null || username == "") {
+					alert("Inserire il nome utente");
 					return false;
 				}
 				return true;
@@ -40,8 +34,8 @@
 			method="post">
 			<table class="tablestyle">
 				<tr>
-					<td>Email</td>
-					<td><input type="text" name="email"><br></td>
+					<td>Nome utente</td>
+					<td><input type="text" name="username"><br></td>
 				</tr>
 				<tr>
 					<td>Password</td>

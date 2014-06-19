@@ -1,3 +1,4 @@
+<%@page import="java.net.*"%>
 <%@page import="java.util.*"%>
 <%@page import="did.*"%>
 
@@ -8,6 +9,7 @@
 		
 	Vector<IscrizioneBean> iscritti = (Vector<IscrizioneBean>)request.getAttribute("iscritti");
 	Vector<MaterialeBean> materiale = (Vector<MaterialeBean>)request.getAttribute("materiale");
+	Vector<IstruttoreBean> istruttoriAux = (Vector<IstruttoreBean>)request.getAttribute("istruttoriAux");
 %>
 
 <html>
@@ -33,9 +35,40 @@
 					Istruttore responsabile: <%= c.getIstruttoreResponsabile().getNome() %> <%= c.getIstruttoreResponsabile().getCognome() %> 
 				</td>
 			</tr>
+<%
+			if (istruttoriAux.size() > 0) {
+			
+%>
+				<tr>
+					<td colspan="2">
+						Altri istruttori:
+						<ul>
+<%
+							for (IstruttoreBean i : istruttoriAux) {
+%>
+								<li> <%= i.getNome() %>  <%= i.getCognome() %> </li>
+<%
+							}
+%>
+						</ul>
+					</td>
+				</tr>
+<%
+			}
+%>
+			
+			<tr>
+				<td colspan="2">
+					Periodo di svolgimento: <%= c.getDataInizio() %> - <%= c.getDataFine() %>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					Numero di iscritti: <%= iscritti.size() %>
+				</td>
+			</tr>
+			
 		</table>
-		
-		<br>
 		
 		<table cellspacing = "35%">
 			<tr>
@@ -43,7 +76,7 @@
 				<th>Data di iscrizione</th>
 			</tr>
 <%
-	for (IscrizioneBean i : iscritti) {
+		for (IscrizioneBean i : iscritti) {
 %>		
 			<tr>
 				<td>
@@ -57,5 +90,41 @@
 <% }
 %>
 		</table>
+		
+		<br>
+		
+<%
+		if (materiale.size() == 0) {
+%>
+			Non &egrave presente materiale didattico.
+<%
+		}
+		else {
+%>
+			Materiale didattico: <br>
+			
+			<table>
+				<tr>
+					<th>Nome file</th>
+					<th>Tipo contenuto</th>
+					<th>Formato</th>
+				</tr>
+				
+<%
+				for (MaterialeBean m : materiale) {
+					String linkMateriale = "\"" + InetAddress.getLocalHost().getHostAddress() + ":8080/Palestra/" +  m.getPercorso() + "\"";
+%>
+					<tr>
+						<td> <a href= <%= linkMateriale %> <%= m.getNome() %> </a> </td>
+						<td> <%= m.getTipo() %> </td>
+						<td> <%= m.getFormato() %> </td>
+					</tr>
+<%
+				}
+%>
+			</table>
+<%
+		}
+%>
    </body>
 </html>
