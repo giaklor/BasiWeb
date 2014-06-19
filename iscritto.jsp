@@ -1,19 +1,20 @@
+<%@page import="java.net.*"%>
 <%@page import="java.util.*"%>
 <%@page import="did.*"%>
 
 <%
-	IscrittoBean iscritto = (IscrittoBean) request.getAttribute("corsiIscritto");
+	IscrittoBean iscritto = (IscrittoBean) request.getAttribute("iscritto");
 	if (iscritto == null)
 		return;
 		
-	Vector<CorsoBean> corsi= (Vector<CorsoBean>)request.getAttribute("corsiIscritto");
+	Vector<CorsoBean> corsi = (Vector<CorsoBean>)request.getAttribute("corsiIscritto");
 	Map<Integer, Vector<MaterialeBean>> materiali = (Map<Integer, Vector<MaterialeBean>>) request.getAttribute("materiali");
 %>
 
 <html>
    <head>
       <link rel="stylesheet" type="text/css" href="style.css"/>
-      <title>Palestra Delta - Profilo di <%= iscritto.getNome() %> <%= iscritto.getCognome() %> <%</title>
+      <title>Palestra Delta - Profilo di <%= iscritto.getNome() %> <%= iscritto.getCognome() %> </title>
    </head>
    <body>
 
