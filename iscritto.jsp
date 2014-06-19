@@ -36,6 +36,7 @@
 				
 				Vector<MaterialeBean> materialeCorso = materiali.get(c.getIdCorso());			
 %>
+				<br>
 				<%= c.getNome() %>
 				
 				<ul>
