@@ -12,7 +12,9 @@
 		<table cellspacing = "35%">
 			<tr>
 				<td colspan="2">
-					Palestra Delta si sviluppa su 2 piani per una superficie totale coperta di 3.500 mq. e ospita una molteplicit&agrave di attivit&agrave e servizi focalizzati al mantenimento e miglioramento della qualit&agrave della vita: dal movimento fisico alla diagnosi e cura medico/riabilitativa, dal piacere di un'alimentazione sana al supporto per i genitori con aree dedicate ai bambini, dalla Piscina alla SPA.
+					<p class="textstyle">
+						Palestra Delta si sviluppa su 2 piani per una superficie totale coperta di 3.500 mq. e ospita una molteplicit&agrave di attivit&agrave e servizi focalizzati al mantenimento e miglioramento della qualit&agrave della vita: dal movimento fisico alla diagnosi e cura medico/riabilitativa, dal piacere di un'alimentazione sana al supporto per i genitori con aree dedicate ai bambini, dalla Piscina alla SPA.
+					</p>
 				</td>
 			</tr>
 			<tr>

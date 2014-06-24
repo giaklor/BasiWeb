@@ -20,16 +20,17 @@
 
 		<table cellspacing = "35%">
 			<tr>
-				<td colspan="2">
+				<td>
 					Benvenuto, accesso eseguito come:<br>
 					<%= iscritto.getNome() %> <%= iscritto.getCognome() %> - <%= iscritto.getDataNascita() %>
 				</td>
 			</tr>
-		</table>
 		
 <%
 		if (corsi.size() > 0) {
 %>
+			<tr>
+				<td>
 			I tuoi corsi:
 <%
 			for (CorsoBean c : corsi) {
@@ -49,14 +50,19 @@
 				}
 %>
 				</ul>
+				</td>
+			</tr>
 <%
 			}
 		}
 		else {
 %>
+			<tr><td>
 			Non sei iscritto ad alcun corso.
+			</td></tr>
 <%
 		}
 %>
+		</table>
    </body>
 </html>

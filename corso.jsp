@@ -21,17 +21,17 @@
 
 		<table cellspacing = "35%">
 			<tr>
-				<td colspan="2">
+				<td>
 					<h3 class="smallheaderstyle"> <%= c.getNome() %> </h3>
 				</td>
 			</tr>
 			<tr>
-				<td colspan="2">
+				<td>
 					<%= c.getDescrizione() %>
 				</td>
 			</tr>
 			<tr>
-				<td colspan="2">
+				<td>
 					Istruttore responsabile: <%= c.getIstruttoreResponsabile().getNome() %> <%= c.getIstruttoreResponsabile().getCognome() %> 
 				</td>
 			</tr>
@@ -40,7 +40,7 @@
 			
 %>
 				<tr>
-					<td colspan="2">
+					<td>
 						Altri istruttori:
 						<ul>
 <%
@@ -58,12 +58,12 @@
 %>
 			
 			<tr>
-				<td colspan="2">
+				<td>
 					Periodo di svolgimento: <%= c.getDataInizio() %> - <%= c.getDataFine() %>
 				</td>
 			</tr>
 			<tr>
-				<td colspan="2">
+				<td>
 					Numero di iscritti: <%= iscritti.size() %>
 				</td>
 			</tr>
@@ -92,18 +92,22 @@
 		</table>
 		
 		<br>
+
+
 		
 <%
 		if (materiale.size() == 0) {
 %>
-			Non &egrave presente materiale didattico.
+		<table>
+			<tr><td>Non &egrave presente materiale didattico.</td></tr>
+		</table>
 <%
 		}
 		else {
 %>
 			Materiale didattico: <br>
-			
-			<table>
+
+			<table>			
 				<tr>
 					<th>Nome file</th>
 					<th>Tipo contenuto</th>

@@ -32,7 +32,7 @@
 			action="main" 
 			onsubmit="return validateForm()"
 			method="post">
-			<table class="tablestyle">
+			<table>
 				<tr>
 					<td>Nome utente</td>
 					<td><input type="text" name="username"><br></td>

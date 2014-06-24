@@ -1,6 +1,5 @@
 h1.headerstyle {font-family:"Verdana"; text-align:center; color:darkblue;}
 .smallheaderstyle {font-family:"Verdana"; color:darkblue; font-weight:bold;}
-.textstyle {font-family:"Tahoma"; text-align:justify; font-size:70%;}
+.textstyle {font-family:"Tahoma"; text-align:justify;}
 a.linkstyle {color:darkblue;}
 .uliststyle{list-style-type:square;}
-.tablestyle {border:1px solid darkblue;}
