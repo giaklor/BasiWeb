@@ -18,12 +18,12 @@
 
 		<table cellspacing = "35%">
 			<tr>
-				<td colspan="2">
+				<td>
 					<h3 class="smallheaderstyle"> <%= t.getDenominazione() %> </h3>
 				</td>
 			</tr>
 			<tr>
-				<td colspan="2">
+				<td>
 					<%=  t.getDescrizione() %>
 				</td>
 			</tr>
@@ -45,7 +45,7 @@
 %>		
 			<tr>
 				<td>
-					<a href=<%= linkCorso %>> <%= c.getIdCorso() %> </a></b>
+					<a class="linkstyle" href=<%= linkCorso %>> <%= c.getIdCorso() %> </a></b>
 				</td>
 				<td>
 					<%= c.getNome() %>
