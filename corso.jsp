@@ -155,7 +155,7 @@
 					String linkMateriale = "\"" + InetAddress.getLocalHost().getHostAddress() + ":8080/Palestra/materiali/" +  m.getPercorso() + "\"";
 %>
 					<tr>
-						<td> <a href= <%= linkMateriale %> <%= m.getNome() %> </a> </td>
+						<td> <a href= <%= linkMateriale %>> <%= m.getNome() %> </a> </td>
 						<td> <%= m.getTipo() %> </td>
 						<td> <%= m.getFormato() %> </td>
 					</tr>
