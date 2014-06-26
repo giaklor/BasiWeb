@@ -139,9 +139,11 @@
 		}
 		else {
 %>
-			Materiale didattico: <br>
 
-			<table>			
+			<table cellspacing = "35%">
+			   <tr>
+			      <td>Materiale didattico:</td>
+			   </tr>			
 				<tr>
 					<th>Nome file</th>
 					<th>Tipo contenuto</th>
