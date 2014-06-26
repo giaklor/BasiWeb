@@ -6,9 +6,14 @@
 		<script type="text/javascript">
 			function validateForm() {
 				var username = document.forms["subscriberData"]["username"].value;
+				var password = document.forms["subscriberData"]["pwd"].value;
 				if (username == null || username == "") {
 					alert("Inserire il nome utente");
 					return false;
+				}
+				if (password == null || password == "") {
+				   alert("Inserire la password");
+				   return false;
 				}
 				return true;
 			}
