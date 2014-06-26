@@ -43,9 +43,9 @@
 				<ul>
 <%
 				for (MaterialeBean m : materialeCorso) {
-					String linkMateriale = "\"" + InetAddress.getLocalHost().getHostAddress() + ":8080/Palestra/" +  m.getPercorso() + "\"";
+					String linkMateriale = "\"" + "/Palestra/materiali" +  m.getPercorso() + "\"";
 %>
-					<li> <a class="linkstyle" href= <%= linkMateriale %> <%= m.getNome() %> </a> </li>
+					<li> <a class="linkstyle" href= <%= linkMateriale %>> <%= m.getNome() %> </a> </li>
 <%
 				}
 %>
