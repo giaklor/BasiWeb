@@ -10,6 +10,7 @@
 	Vector<IscrizioneBean> iscritti = (Vector<IscrizioneBean>)request.getAttribute("iscritti");
 	Vector<MaterialeBean> materiale = (Vector<MaterialeBean>)request.getAttribute("materiale");
 	Vector<IstruttoreBean> istruttoriAux = (Vector<IstruttoreBean>)request.getAttribute("istruttoriAux");
+	Vector<LezioneBean> lezioni = (Vector<LezioneBean>)request.getAttribute("lezioni");
 %>
 
 <html>
@@ -62,6 +63,39 @@
 					Periodo di svolgimento: <%= c.getDataInizio() %> - <%= c.getDataFine() %>
 				</td>
 			</tr>
+			
+<%
+			if (lezioni.size() > 0) {
+			
+%>
+				<tr>
+					<td>
+						Lezioni:
+						<ul>
+<%
+							for (LezioneBean l : lezioni) {
+							   String giorno = "";
+							   
+							   switch (l.getGiorno()) {
+							      case 1: giorno = "Luned&igrave"; break;
+							      case 2: giorno = "Marted&igrave"; break;
+							      case 3: giorno = "Mercoled&igrave"; break;
+							      case 4: giorno = "Gioved&igrave"; break;
+							      case 5: giorno = "Venerd&igrave"; break;
+							      default: giorno = "Sabato"; break;
+							   }
+%>
+								<li> <%= giorno %> dalle <%= l.getOraInizio() %> alle <%= l.getOraFine() %> </li>
+<%
+							}
+%>
+						</ul>
+					</td>
+				</tr>
+<%
+			}
+%>
+
 			<tr>
 				<td>
 					Numero di iscritti: <%= iscritti.size() %>
