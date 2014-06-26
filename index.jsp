@@ -19,7 +19,7 @@
 			</tr>
 			<tr>
 				<td colspan="2">
-					<h3 class="smallheaderstyle">I nostri corsi</h3>
+					<h3 class="smallheaderstyle">Le nostre attivit&agrave</h3>
 				</td>
 			</tr>
 <%
