@@ -116,7 +116,7 @@
 				
 <%
 				for (MaterialeBean m : materiale) {
-					String linkMateriale = "\"" + InetAddress.getLocalHost().getHostAddress() + ":8080/Palestra/materiali" +  m.getPercorso() + "\"";
+					String linkMateriale = "\"" + InetAddress.getLocalHost().getHostAddress() + ":8080/Palestra/materiali/" +  m.getPercorso() + "\"";
 %>
 					<tr>
 						<td> <a href= <%= linkMateriale %> <%= m.getNome() %> </a> </td>
