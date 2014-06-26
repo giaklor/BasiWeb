@@ -98,7 +98,7 @@
 <%
 		if (materiale.size() == 0) {
 %>
-		<table>
+		<table cellspacing = "35%">
 			<tr><td>Non &egrave presente materiale didattico.</td></tr>
 		</table>
 <%
@@ -116,7 +116,7 @@
 				
 <%
 				for (MaterialeBean m : materiale) {
-					String linkMateriale = "\"" + InetAddress.getLocalHost().getHostAddress() + ":8080/Palestra/" +  m.getPercorso() + "\"";
+					String linkMateriale = "\"" + InetAddress.getLocalHost().getHostAddress() + ":8080/Palestra/materiali" +  m.getPercorso() + "\"";
 %>
 					<tr>
 						<td> <a href= <%= linkMateriale %> <%= m.getNome() %> </a> </td>
