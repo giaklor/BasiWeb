@@ -30,36 +30,53 @@
 		</table>
 		
 		<br>
-		
-		<table class="tablestyle">
-			<tr>
-				<th>Codice</th>
-				<th>Nome</th>
-				<th>Istruttore responsabile</th>
-				<th>Periodo di svolgimento</th>
-			</tr>
+
 <%
-	for (CorsoBean c : corsi) {
-			String linkCorso = "\"main?ps=corso&idCorso=" + c.getIdCorso() + "\"";
-			IstruttoreBean istruttoreResp = c.getIstruttoreResponsabile();
-%>		
-			<tr>
-				<td>
-					<a class="linkstyle" href=<%= linkCorso %>> <%= c.getIdCorso() %> </a></b>
-				</td>
-				<td>
-					<%= c.getNome() %>
-				</td>
-				<td>
-					<%= istruttoreResp.getNome() %> <%= istruttoreResp.getCognome() %>
-				</td>
-				<td>
-					<%= c.getDataInizio() %> - <%= c.getDataFine() %>
-				</td>
-				
-			</tr>
-<% }
+   if (corsi.size() > 0) {
 %>
-		</table>
+		
+		   <table class="tablestyle">
+			   <tr>
+				   <th>Codice</th>
+				   <th>Nome</th>
+				   <th>Istruttore responsabile</th>
+				   <th>Periodo di svolgimento</th>
+			   </tr>
+<%
+	   for (CorsoBean c : corsi) {
+			   String linkCorso = "\"main?ps=corso&idCorso=" + c.getIdCorso() + "\"";
+			   IstruttoreBean istruttoreResp = c.getIstruttoreResponsabile();
+%>		
+			   <tr>
+				   <td>
+					   <a class="linkstyle" href=<%= linkCorso %>> <%= c.getIdCorso() %> </a></b>
+				   </td>
+				   <td>
+					   <%= c.getNome() %>
+				   </td>
+				   <td>
+					   <%= istruttoreResp.getNome() %> <%= istruttoreResp.getCognome() %>
+				   </td>
+				   <td>
+					   <%= c.getDataInizio() %> - <%= c.getDataFine() %>
+				   </td>
+				
+			   </tr>
+<% 
+   }
+%>
+		   </table>
+<%
+   }
+   else {
+%>
+      <table class="tablestyle">
+			   <tr>
+				   <td>I corsi per questo tipo di attivit&agrave non sono ancora disponibili.</td>
+			   </tr>
+	   </table>
+<%
+   }
+%>
    </body>
 </html>
