@@ -20,7 +20,7 @@
    </head>
    <body>
 
-		<table cellspacing = "35%">
+		<table class="tablestyle">
 			<tr>
 				<td>
 					<h3 class="smallheaderstyle"> <%= c.getNome() %> </h3>
@@ -104,6 +104,9 @@
 			
 		</table>
 		
+<%
+      if (iscritti.size() > 0) {
+%>
 		<table cellspacing = "35%">
 			<tr>
 				<th>Nome Iscritto</th>
@@ -121,18 +124,16 @@
 				</td>
 				
 			</tr>
-<% }
+<%    }
 %>
 		</table>
 		
-		<br>
-
-
-		
 <%
+      }
+      
 		if (materiale.size() == 0) {
 %>
-		<table cellspacing = "35%">
+		<table class="tablestyle">
 			<tr><td>Non &egrave presente materiale didattico.</td></tr>
 		</table>
 <%
@@ -140,7 +141,7 @@
 		else {
 %>
 
-			<table cellspacing = "35%">
+			<table class="tablestyle">
 			   <tr>
 			      <td>Materiale didattico:</td>
 			   </tr>			
@@ -155,7 +156,7 @@
 					String linkMateriale = "\"" + "/Palestra/materiali/" +  m.getPercorso() + "\"";
 %>
 					<tr>
-						<td> <a href= <%= linkMateriale %>> <%= m.getNome() %> </a> </td>
+						<td> <a class="linkstyle" href= <%= linkMateriale %>> <%= m.getNome() %> </a> </td>
 						<td> <%= m.getTipo() %> </td>
 						<td> <%= m.getFormato() %> </td>
 					</tr>

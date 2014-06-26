@@ -16,7 +16,7 @@
    </head>
    <body>
 
-		<table cellspacing = "35%">
+		<table class="tablestyle">
 			<tr>
 				<td>
 					<h3 class="smallheaderstyle"> <%= t.getDenominazione() %> </h3>
@@ -31,7 +31,7 @@
 		
 		<br>
 		
-		<table cellspacing = "35%">
+		<table class="tablestyle">
 			<tr>
 				<th>Codice</th>
 				<th>Nome</th>

@@ -9,7 +9,7 @@
    <body>
       <h1 class="headerstyle">Palestra Delta</h1>
 		<h2 align="center" class="smallheaderstyle"><i>Wellness - fitness center</i></h2>
-		<table cellspacing = "35%">
+		<table class="tablestyle">
 			<tr>
 				<td colspan="2">
 					<p class="textstyle">
@@ -29,7 +29,7 @@
 %>		
 			<tr>
 				<td>
-					<a href=<%= linkTipo %>> <%= t.getDenominazione() %> </a></b>
+					<a class="linkstyle" href=<%= linkTipo %>> <%= t.getDenominazione() %> </a></b>
 				</td>
 			</tr>
 <% }
@@ -44,7 +44,7 @@
 					<ul class="uliststyle">
 						<li>Indirizzo: Strada le Grazie, 15 - 37134 Verona</li>
 						<li>Telefono: 045 8027071 - 045 8027802 </li>
-						<li>Email: <a href="mailto:info@palestradelta.it">info@palestradelta.it</a></li>
+						<li>Email: <a class="linkstyle" href="mailto:info@palestradelta.it">info@palestradelta.it</a></li>
 					<ul>
 				</td>
 			</tr>

@@ -18,7 +18,7 @@
    </head>
    <body>
 
-		<table cellspacing = "35%">
+		<table class="tablestyle">
 			<tr>
 				<td>
 					Benvenuto, accesso eseguito come:<br>
