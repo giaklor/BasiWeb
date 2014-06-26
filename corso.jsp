@@ -152,7 +152,7 @@
 				
 <%
 				for (MaterialeBean m : materiale) {
-					String linkMateriale = "\"" + "/materiali/" +  m.getPercorso() + "\"";
+					String linkMateriale = "\"" + "/Palestra/materiali/" +  m.getPercorso() + "\"";
 %>
 					<tr>
 						<td> <a href= <%= linkMateriale %>> <%= m.getNome() %> </a> </td>
