@@ -32,12 +32,13 @@
 			<tr>
 				<td>
 			I tuoi corsi:
+			<ul>
 <%
 			for (CorsoBean c : corsi) {
 				
 				Vector<MaterialeBean> materialeCorso = materiali.get(c.getIdCorso());			
 %>
-				<br>
+				<li>
 				<%= c.getNome() %>
 				
 				<ul>
@@ -50,10 +51,14 @@
 				}
 %>
 				</ul>
+				</li>
 				</td>
 			</tr>
 <%
 			}
+%>
+			</ul>
+<%
 		}
 		else {
 %>
