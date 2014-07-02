@@ -44,7 +44,7 @@
 				<ul>
 <%
 				for (MaterialeBean m : materialeCorso) {
-					String linkMateriale = "\"" + "/Palestra/materiali" +  m.getPercorso() + "\"";
+					String linkMateriale = "\"" + "/Palestra/materiali/" +  m.getPercorso() + "\"";
 %>
 					<li> <a class="linkstyle" href= <%= linkMateriale %>> <%= m.getNome() %> </a> </li>
 <%
